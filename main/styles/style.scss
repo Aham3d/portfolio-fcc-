@@ -73,7 +73,7 @@ body {
  .sec3 {
     display: none;
     transform: translateY(0) scale(1);
-
+   height: 1000vh;
  }
 
  .sec4 {
@@ -260,15 +260,149 @@ body {
    }
 }
 
+.about-stats {
+   padding-bottom: 4rem;
+   .progress-bars  {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+      .progress-bar {
+         display: flex;
+         flex-direction: column;
+         .prog-title {
+            text-transform: uppercase;
+            font-weight: 500;
+         }
+         .progress-con{
+            display: flex;
+            align-items: center;
+            .prog-text {
+               color: var(--color-gray2);
+            }
+            .progress {
+               width: 100%;
+               height: .45rem;
+               background-color: var(--color-gray4);
+               margin-left: 1rem;
+               position: relative;
+               span {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  height: 100%;
+                  color: var(--color-secondary);
+                  width: 60%;
+               }
+               .html {
+                  width: 90%;
+               }
+               .css {
+                  width: 80%;
+               }
+               .javascript {
+                  width: 70%;
+               }
+               .react {
+                  width: 60%;
+               }
+               .node {
+                  width: 60%;
+               }
+               .mongo {
+                  width: 60%;
+               }
+            }
+         }
+      }
+   }
+}
+
+.stat-title {
+   text-transform: uppercase;
+   font-size: 1.4rem;
+   text-align: center;
+   padding: 3.5rem 0;
+   position: relative;
+   &::before{
+      content: '';
+      left: 50%;
+      top: 0;
+      width: 40%;
+      height: 1px;
+      background-color: var(--color-gray5);
+      transform: translateX(-50%);
+      position: absolute;
+   }
+}
+
+// timeline
+.timeline   {
+   display: flex;
+   flex-direction: column;
+   grid-template-columns: 1, 2fr;  
+   grid-gap: 2rem;
+   padding-bottom: 3rem;
+   .timeline-item {
+      position: absolute;
+      padding-left: 3rem;
+      border-left: 1px solid var(--color-gray5);
+      .tl-icon {
+         position: absolute;
+         left: -27px;
+         top: 0;
+         background-color: var(--color-secondary);
+         width: 50px;
+         height: 50px;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         i {
+            font-size: 1.3rem;
+
+         }
+      }
+      .tl-duration   {
+         padding: 0.2rem 0.6rem;
+         background-color: var(--color-gray5);
+         border-radius: 15px;
+         display: inline-block;
+         font-size: 0.8rem;
+         text-transform: uppercase;
+         font-weight: 500;
+
+      }
+      h5 {
+         padding: .7rem 0;
+         text-transform: uppercase;
+         font-size: 1.2rem;
+         font-weight: 600;
+         span {
+            color: var(--color-gray2);
+            font-weight: 500;
+            font-size: 1.2rem;
+         }
+      }
+      p {
+         color: var(--color-gray2);
+      }
+   }
+}
+
+
+
+
+
 // independent-content
 
 .btn-container {
    display: flex;
    align-self: flex-start;
+   justify-content: space-between;
 }
 
 .main-btn {
-   width: 229px;
+   width: 236px;
    border-radius: 30px;
    color: inherit;
    font-weight: 600;
