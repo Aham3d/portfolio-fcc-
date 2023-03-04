@@ -335,58 +335,141 @@ body {
    }
 }
 
-// timeline
-.timeline   {
-   display: flex;
-   flex-direction: column;
-   grid-template-columns: 1, 2fr;  
+// // timeline
+// .timeline   {
+//    display: flex;
+//    flex-direction: column;
+//    grid-template-columns: 1, 2fr;  
+//    grid-gap: 2rem;
+//    padding-bottom: 3rem;
+//    .timeline-item {
+//       position: absolute;
+//       padding-left: 3rem;
+//       border-left: 1px solid var(--color-gray5);
+//       .tl-icon {
+//          position: absolute;
+//          left: -27px;
+//          top: 0;
+//          background-color: var(--color-secondary);
+//          width: 50px;
+//          height: 50px;
+//          border-radius: 50%;
+//          display: flex;
+//          align-items: center;
+//          justify-content: center;
+//          i {
+//             font-size: 1.3rem;
+
+//          }
+//       }
+//       .tl-duration   {
+//          padding: 0.2rem 0.6rem;
+//          background-color: var(--color-gray5);
+//          border-radius: 15px;
+//          display: inline-block;
+//          font-size: 0.8rem;
+//          text-transform: uppercase;
+//          font-weight: 500;
+
+//       }
+//       h5 {
+//          padding: .7rem 0;
+//          text-transform: uppercase;
+//          font-size: 1.2rem;
+//          font-weight: 600;
+//          span {
+//             color: var(--color-gray2);
+//             font-weight: 500;
+//             font-size: 1.2rem;
+//          }
+//       }
+//       p {
+//          color: var(--color-gray2);
+//       }
+//    }
+// }
+
+
+// portfolio 
+.port-text {
+   padding: 2rem 0;
+   text-align: center;
+   align-items: center;
+
+}
+
+.portfolios  {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
    grid-gap: 2rem;
-   padding-bottom: 3rem;
-   .timeline-item {
-      position: absolute;
-      padding-left: 3rem;
-      border-left: 1px solid var(--color-gray5);
-      .tl-icon {
-         position: absolute;
-         left: -27px;
-         top: 0;
-         background-color: var(--color-secondary);
-         width: 50px;
-         height: 50px;
-         border-radius: 50%;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         i {
-            font-size: 1.3rem;
-
-         }
-      }
-      .tl-duration   {
-         padding: 0.2rem 0.6rem;
-         background-color: var(--color-gray5);
+   margin-top: 3rem;
+   .portfolio-item {
+      position: relative;
+      img {
+         width: 100%;
+         height: 300px;
+         object-fit: cover;
          border-radius: 15px;
-         display: inline-block;
-         font-size: 0.8rem;
-         text-transform: uppercase;
-         font-weight: 500;
 
       }
-      h5 {
-         padding: .7rem 0;
-         text-transform: uppercase;
-         font-size: 1.2rem;
-         font-weight: 600;
-         span {
-            color: var(--color-gray2);
-            font-weight: 500;
-            font-size: 1.2rem;
+      .hover-items {
+         width: 100%;
+         height: 100%;
+         background-color: var(--color-secondary);
+         position: absolute;
+         left: 0;
+         top: 0;
+         border-radius: 15px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         opacity: 0;
+         transform: scale(0);
+         transition: all .4s ease-in-out;
+         h3 {
+            font-size: 1.5rem;
+            color: var(--color-white);
+            margin-bottom: 1.5rem;
+
          }
-      }
-      p {
-         color: var(--color-gray2);
+         .icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .icon {
+               background-color: var(--color-primary);
+               border-radius: 50%;
+               width: 50px;
+               height: 50px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               margin: 0 1rem;
+               cursor: pointer;
+               transition: all .4s ease-in-out;
+
+               i {
+                  font-size: 1.5rem;
+                  color: white;
+                  margin: 0 1rem;
+               }
+
+               &:hover {
+                  background-color: white;
+                  i {
+                     color: var(--color-primary);
+                  }
+               }
+            }
+         }
       }
    }
+}
+
+.portfolio-item:hover  .hover-items{
+   opacity: 1;
+   transform: scale(1 );
 }
 
 
@@ -402,7 +485,7 @@ body {
 }
 
 .main-btn {
-   width: 236px;
+   width: 229px;
    border-radius: 30px;
    color: inherit;
    font-weight: 600;
