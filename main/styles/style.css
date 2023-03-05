@@ -428,7 +428,7 @@ section {
 .blogs .blog:hover img {
   filter: grayscale(0);
   transform: scale(1.1);
-  box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.8);
 }
 .blogs .blog img {
   width: 100%;

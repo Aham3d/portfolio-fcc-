@@ -496,7 +496,7 @@ body {
          img {
             filter: grayscale(0);
             transform: scale(1.1);
-            box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.8);
+            box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.8);
             
          }
       }
@@ -508,7 +508,6 @@ body {
          border-top-right-radius: 5px;
          filter: grayscale(100%);
          transition: all 0.4s ease-in-out;
-
       }
       .blog-text {
          margin-top: -7px;
@@ -526,7 +525,7 @@ body {
             color: var(--color-gray2);
             line-height: 2rem;
             padding-bottom: 1rem;
-            
+
          }
       }
    }
@@ -534,17 +533,7 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
 // independent-content
-
 .btn-container {
    display: flex;
    align-self: flex-start;
