@@ -147,11 +147,10 @@ section {
 }
 
 .theme-btn {
-  top: 5%;
-  right: 2.5%;
-  width: 70px;
-  width: 70px;
-  height: 70px;
+  top: 3%;
+  right: 2%;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: var(--color-gray4);
   cursor: pointer;
